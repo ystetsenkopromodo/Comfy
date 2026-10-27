@@ -359,15 +359,15 @@
 
   <div class="column">
     <!-- Декоративне листя (координати з макету, відносно колонки 600px) -->
-    <div class="leaf far" style="left:678px; top:648px; width:125px; --r:20deg"><img src="assets/leaf.png" alt=""></div>
-    <div class="leaf far" style="left:939px; top:381px; width:84px; --r:-30deg; animation-delay:-1s"><img src="assets/leaf.png" alt=""></div>
-    <div class="leaf far" style="left:-331px; top:702px; width:84px; --r:40deg; animation-delay:-2s"><img src="assets/leaf.png" alt=""></div>
-    <div class="leaf far" style="left:-711px; top:564px; width:149px; --r:-10deg; animation-delay:-.5s"><img src="assets/leaf.png" alt=""></div>
-    <div class="leaf far" style="left:748px; top:-73px; width:198px; --r:15deg; animation-delay:-3s"><img src="assets/leaf.png" alt=""></div>
-    <div class="leaf far" style="left:-161px; top:262px; width:141px; --r:-20deg; animation-delay:-1.5s"><img src="assets/leaf.png" alt=""></div>
+    <div class="leaf far" style="left:678px; top:648px; width:125px; --r:20deg"><img src="/leaf.png" alt=""></div>
+    <div class="leaf far" style="left:939px; top:381px; width:84px; --r:-30deg; animation-delay:-1s"><img src="/leaf.png" alt=""></div>
+    <div class="leaf far" style="left:-331px; top:702px; width:84px; --r:40deg; animation-delay:-2s"><img src="/leaf.png" alt=""></div>
+    <div class="leaf far" style="left:-711px; top:564px; width:149px; --r:-10deg; animation-delay:-.5s"><img src="/leaf.png" alt=""></div>
+    <div class="leaf far" style="left:748px; top:-73px; width:198px; --r:15deg; animation-delay:-3s"><img src="/leaf.png" alt=""></div>
+    <div class="leaf far" style="left:-161px; top:262px; width:141px; --r:-20deg; animation-delay:-1.5s"><img src="/leaf.png" alt=""></div>
 
     <a class="logo" data-link="https://comfy.ua/ua/sale-promo/" href="https://comfy.ua/ua/sale-promo/" aria-label="COMFY — акції">
-      <img src="assets/logo.png" alt="COMFY" width="176" height="44">
+      <img src="/logo.png" alt="COMFY" width="176" height="44">
     </a>
 
     <nav class="menu">
@@ -377,7 +377,7 @@
     </nav>
 
     <div class="scene">
-      <img class="scene-bg" src="assets/scene.png" alt="Геловінська конячка COMFY">
+      <img class="scene-bg" src="/scene.png" alt="Геловінська конячка COMFY">
       <button class="box" type="button" data-pos="1" aria-label="Подарункова коробка 1"></button>
       <button class="box" type="button" data-pos="2" aria-label="Подарункова коробка 2"></button>
       <button class="box" type="button" data-pos="3" aria-label="Подарункова коробка 3"></button>
@@ -390,7 +390,7 @@
     </div>
 
     <section class="result" id="result" aria-live="polite">
-      <img class="horse" src="assets/horse_pumpkin.png" alt="" width="338" height="470">
+      <img class="horse" src="/horse_pumpkin.png" alt="" width="338" height="470">
       <div>
         <h2>Вітаємо, ви знайшли сюрприз!</h2>
 
@@ -413,8 +413,8 @@
   };
 
   // Що лежить у порожніх коробках (1-ша і 2-га відкриті) та в призовій (3-тя відкрита)
-  const EMPTY_IMAGES = ["assets/box_open_1.png", "assets/box_open_2.png"];
-  const PRIZE_IMAGE = "assets/box_open_3.png";
+  const EMPTY_IMAGES = ["/box_open_1.png", "/box_open_2.png"];
+  const PRIZE_IMAGE = "/box_open_3.png";
   const EMPTY_TEXT = ["Порожньо! Спробуй ще 👻", "І тут привид! Спробуй ще 🎃"];
 
   // Додаємо UTM до всіх посилань
@@ -436,7 +436,7 @@
   boxes.forEach(box => {
     const n = box.dataset.pos;
     box.innerHTML = `
-      <img class="closed" src="assets/box${n}.png" alt="">
+      <img class="closed" src="/box${n}.png" alt="">
       <img class="open" alt="">
       <span class="flash"></span>
       <span class="bubble"></span>`;
@@ -510,7 +510,7 @@
   function dropLeaves() {
     for (let i = 0; i < 40; i++) {
       const leaf = document.createElement("img");
-      leaf.src = "assets/leaf.png";
+      leaf.src = "/leaf.png";
       leaf.alt = "";
       leaf.className = "falling";
       const size = 28 + Math.random() * 50;
