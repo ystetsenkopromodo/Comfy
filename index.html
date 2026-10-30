@@ -244,10 +244,7 @@
     color: var(--white);
     background: var(--orange);
     border-radius: 6px;
-    min-width: 208px;
-    width: auto;
-    padding: 0 20px;
-    white-space: nowrap;
+    width: 208px;
     max-width: 100%;
     height: 65px;
     position: relative;
@@ -397,15 +394,16 @@
       <div>
         <h2>Вітаємо, ви знайшли сюрприз!</h2>
 
-        <div class="valid">Цінові глюки -60% з 23.10 до 01.11</div>
-        <a class="promo" id="promo" data-link="https://comfy.ua/ua/products-discounts/" href="https://comfy.ua/ua/products-discounts/" target="_blank" rel="noopener"></a>
+        <p>А щоб скористатися магічними пропозиціями, введіть промокод і перейдіть за посиланням</p>
+        <div class="valid">Магічні знижки діють лише 28 та 29 жовтня</div>
+        <a class="promo" id="promo" data-link="https://comfy.ua/ua/sale-promo/" href="https://comfy.ua/ua/sale-promo/" target="_blank" rel="noopener"></a>
       </div>
     </section>
   </div>
 
 <script>
   // Промокод, який випадає у третій відкритій коробці
-  const PROMO_CODE = "ЦІНОВІ ГЛЮКИ";
+  const PROMO_CODE = "MAGIC";
 
   // UTM-мітки для всіх посилань
   const UTM = {
@@ -416,7 +414,7 @@
 
   // Що лежить у порожніх коробках (1-ша і 2-га відкриті) та в призовій (3-тя відкрита)
   const EMPTY_IMAGES = ["assets/box_open_1.png", "assets/box_open_2.png"];
-  const PRIZE_IMAGE = "assets/box_open_4.png";
+  const PRIZE_IMAGE = "assets/box_open_3.png";
   const EMPTY_TEXT = ["Порожньо! Спробуй ще 👻", "І тут привид! Спробуй ще 🎃"];
 
   // Додаємо UTM до всіх посилань
@@ -445,7 +443,7 @@
     box.addEventListener("click", () => openBox(box));
   });
 
-  // Кнопка з промокодом: копіює промокод і відкриває сторінку акції в новій вкладці
+  // Кнопка MAGIC: копіює промокод і відкриває сторінку акції в новій вкладці
   promoBtn.innerHTML = `${PROMO_CODE}<span class="hint"></span>`;
   promoBtn.addEventListener("click", copyCode);
 
